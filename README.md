@@ -1,17 +1,10 @@
-# clearview-window-cleaning
-Clearview window cleaning website project
+# cycny
+CYCNY orchestra website project
 
-## Icon (rounded) - `DEMO USE ONLY`
+## Important Information
+- [Original Site](http://www.youthorchestra.com/)
 
-![image](https://github.com/RevvifiWebsites/clearview-window-cleaning/assets/66228004/f550f17d-d8f5-4c40-921d-b0f57eda7bc4)
-
-## Icon (normal)
-
-![image](https://github.com/RevvifiWebsites/clearview-window-cleaning/assets/66228004/95d3e57b-6140-443e-b764-281953bf5c1a)
-
-## Preferences
-
-- Use colors found in logo
-- Minimalistic, simple, user-friendly design
-  - Apple-esque
-- Vibrant / visually appealing 
+## Main Goals
+- Easy to use and organized site
+- Somewhat up to developer's discretion for main design choices
+- Maintain a uniform design throughout site based on approved design
