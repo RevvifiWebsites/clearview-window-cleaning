@@ -81,7 +81,9 @@ body {
 #contacte:hover {
   color: rgb(53, 134, 233);
 }
-
+.chalf h4:hover {
+  text-decoration: underline;
+}
 #contacti {
   color: black;
   transition-duration: 0.7s;
