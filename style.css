@@ -65,6 +65,38 @@ body {
   z-index: 5;
 }
 
+#contactp {
+  transition: transform .7s ease-in-out;
+}
+
+#contactp:hover {
+  transform: rotate(30deg);
+}
+
+#contacte {
+  color: black;
+  transition-duration: 0.7s;
+}
+
+#contacte:hover {
+  color: rgb(53, 134, 233);
+}
+
+#contacti {
+  color: black;
+  transition-duration: 0.7s;
+
+}
+#contacti:hover {
+  color:#C13584;
+}
+#contactf {
+  color:black;
+  transition-duration: 0.7s;
+}
+#contactf:hover {
+  color:#4267B2;
+}
 #head-div {
   display: flex;
   flex-direction: column;
@@ -73,9 +105,11 @@ body {
   width: 50%;
   min-width: min(500px, 100%);
 }
+
 .chalf i {
-  width:30px;
+  width: 30px;
 }
+
 .primary {
   background-color: #79ACE1;
   border-radius: 15px;
@@ -90,7 +124,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height:100vh;
+  height: 100vh;
 }
 
 .secondary {
