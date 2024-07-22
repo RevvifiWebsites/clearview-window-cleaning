@@ -73,7 +73,9 @@ body {
   width: 50%;
   min-width: min(500px, 100%);
 }
-
+.chalf i {
+  width:30px;
+}
 .primary {
   background-color: #79ACE1;
   border-radius: 15px;
