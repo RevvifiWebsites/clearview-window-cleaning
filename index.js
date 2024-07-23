@@ -44,5 +44,20 @@ window.onload = function () {
   })
   $("#nav-icon").click(function() {
     window.location.href="/"
+
+  })
+  console.log('ea')
+  $(".linkau").click(function() {
+    console.log("ea")
+    window.location.href="/about.html"
+  })
+  $(".linkgq").click(function () {
+    window.location.href = "/quote.html"
+  })
+  $(".linkcu").click(function () {
+    window.location.href = "/contact.html"
+  })
+  $(".linkop").click(function () {
+    window.location.href = "/process.html"
   })
 }
