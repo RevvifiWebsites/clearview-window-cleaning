@@ -115,8 +115,10 @@ body {
 .primary {
   background-color: #5098e4;
   border-radius: 15px;
-  padding: 7px 14px;
+  padding: 9px 18px;
   border: none;
+  transition-duration: 0.1s;
+  outline:none;
   color: white;
 }
 .navBar i {
@@ -131,14 +133,22 @@ body {
   justify-content: center;
   height: 100vh;
 }
-
+.primary:hover {
+  background-color: #559eec;
+}
 .secondary {
   background-color: #ffffff00;
   border-radius: 15px;
-  padding: 5px 10px;
+    transition-duration: 0.1s;
+  padding: 7px 14px;  
+  outline:none;
   border: solid 2px #5098e4;
   color: #5098e4;
 
+}
+.secondary:hover {
+  background-color: #5098e4;
+  color:white;
 }
 #menu {
   height:100vh;
