@@ -42,4 +42,7 @@ window.onload = function () {
 
 
   })
+  $("#nav-icon").click(function() {
+    window.location.href="/"
+  })
 }
