@@ -113,7 +113,7 @@ body {
 }
 
 .primary {
-  background-color: #79ACE1;
+  background-color: #5098e4;
   border-radius: 15px;
   padding: 7px 14px;
   border: none;
@@ -136,8 +136,8 @@ body {
   background-color: #ffffff00;
   border-radius: 15px;
   padding: 5px 10px;
-  border: solid 2px #79ACE1;
-  color: #79ACE1;
+  border: solid 2px #5098e4;
+  color: #5098e4;
 
 }
 #menu {
