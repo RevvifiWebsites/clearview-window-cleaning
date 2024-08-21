@@ -49,7 +49,7 @@ window.onload = function () {
   console.log('ea')
   $(".linkau").click(function() {
     console.log("ea")
-    window.location.href="/about.html"
+    window.location.href="/mission.html"
   })
   $(".linkgq").click(function () {
     window.location.href = "/quote.html"
