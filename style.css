@@ -93,7 +93,19 @@ body {
   transition-duration: 0.7s;
 
 }
-
+.step {
+  width:80%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.stepinfo {
+  width:45%;
+  height:50px;
+  background-color: #7c7c7c;
+  border-radius:15px;
+}
 #contacti:hover {
   color: #C13584;
 }
