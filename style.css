@@ -103,7 +103,7 @@ body {
 .stepinfo {
   width:45%;
   height:50px;
-  background-color: #7c7c7c;
+  background-color: #fafafaa3;
   border-radius:15px;
 }
 #contacti:hover {
@@ -264,7 +264,7 @@ body {
 }
 
 #nav-links {
-  margin-right: 10px;
+  margin-right: 20px;
   margin-left: auto;
   color: rgb(78, 78, 78);
   font-weight: 500;
