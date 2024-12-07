@@ -98,13 +98,27 @@ body {
   display:flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom:15px;
 }
 .stepinfo {
-  width:45%;
-  height:50px;
+  width:95%;
+  padding:3px;
   background-color: #fafafaa3;
   border-radius:15px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.stepinfo h1{
+  font-weight:600;
+  margin-left:5px;
+  font-size:25px;
+  margin-bottom:4px;
+}
+.stepinfo p {
+  margin-left:5px;
+  margin-top:2px;
+  font-weight:300
 }
 #contacti:hover {
   color: #C13584;
