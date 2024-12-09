@@ -93,6 +93,9 @@ body {
   transition-duration: 0.7s;
 
 }
+#main-content img {
+  border-radius:5px;
+}
 .step {
   width:80%;
   display:flex;
