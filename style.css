@@ -368,14 +368,24 @@ body {
     margin-bottom:5px;
     margin-top:5px; 
   }
+  .contacthead {
 
+  }
+  #pbinfo {
+    width: 70% !important;
+  }
   .stepinner,
   .step img {
     width: 95% !important;
   }
-
+  .step img {
+    height:30vh !important;
+  }
   .stepinner {
     justify-content: center !important;
+  }
+  .missionmain h1 {
+    font-size: 40px !important;
   }
 
   #mbar {
