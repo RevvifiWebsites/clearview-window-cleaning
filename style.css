@@ -364,26 +364,33 @@ body {
     align-items: center !important;
     margin-bottom: 0vh;
   }
+
   .stepinfo {
-    margin-bottom:5px;
-    margin-top:5px; 
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
+
   .contacthead {
     flex-direction: column !important;
   }
+
   #pbinfo {
-    width: 70% !important;
+    width: 80% !important;
   }
+
   .stepinner,
   .step img {
     width: 95% !important;
   }
+
   .step img {
-    height:30vh !important;
+    height: 30vh !important;
   }
+
   .stepinner {
     justify-content: center !important;
   }
+
   .missionmain h1 {
     font-size: 40px !important;
   }
@@ -393,20 +400,64 @@ body {
     margin-left: auto;
     display: block;
   }
+
   .chalf {
-    display:flex;
-    height:40vh !important;
+    display: flex;
+    height: 40vh !important;
     align-items: center !important;
-    width:90%;
+    width: 90%;
   }
+
+  .headquote h1 {
+    font-size: 35px !important;
+  }
+
+  .headquote p {
+    font-size: 25px !important;
+  }
+
   .chalf h4 {
-    font-size:15px !important;
+    font-size: 15px !important;
   }
+
+  .maincontent h1 {
+    font-size: 45px !important;
+  }
+
+  .maincontent p {
+    font-size: 25px !important;
+  }
+
   .chalf i {
-    font-size:20px !important;
+    font-size: 20px !important;
   }
+
+  #qform {
+    width: 80vw;
+  }
+
+  #qform p {
+    font-size: 20px !important;
+  }
+
+  #head-content {
+    height: 120vh;
+  }
+
+  .processhead h1 {
+    font-size: 50px !important;
+  }
+
+  .processhead p {
+    font-size: 25px !important;
+  }
+
+  #qform input[type=text] {
+    font-size: 13px !important;
+  }
+
   .chalf img {
-    height:40vh !important;
+    height: 40vh !important;
   }
 
 }
