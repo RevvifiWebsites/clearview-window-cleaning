@@ -163,9 +163,12 @@
           timestamp: String(Date.now())
         });
 
-        alert("Your quote request has been submitted successfully.");
+        swal({
+          title: "Your quote request has been submitted successfully!",
+          icon: "success",
+        })
         for (var item of requiredFields) {
-          $("#" + item).val(" ");
+          $("#" + item).val("");
         }
         $("#qforma2").val("");
         $("#qformai").val("");
