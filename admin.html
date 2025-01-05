@@ -18,15 +18,17 @@
     rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 </head>
 
 <body>
+
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
     import { getFirestore, collection, doc, setDoc, getDoc, query, getDocs } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
     import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
-
     const firebaseConfig = {
       apiKey: "AIzaSyBPAvqzPbdldLzK4m2OCYdFmTC9Gk13-Cg",
       authDomain: "clearviewwindow-882f0.firebaseapp.com",
@@ -35,6 +37,7 @@
       messagingSenderId: "1040592919482",
       appId: "1:1040592919482:web:ddbdf5bacd0494de71db83"
     };
+
 
 
     // Initialize Firebase
@@ -47,8 +50,64 @@
 
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
-        console.log(doc.data())
+        const data = (doc.data())
+        const date = new Date(Number(data.timestamp));
+        const fphone = data.phonenumber.replace(/\D+/g, '')
+          .replace(/(\d{3})(\d{3})(\d{4})/, '($1) $2-$3'); //Source: https://stackoverflow.com/a/8358185/15317733, this solution is pretty good
+        $("#main").append(`
+        <div class="quoteitem" id="qit${doc.id}">
+        <div>
+          <p>ID</p>
+          <h3>${doc.id}</h3>
 
+        </div>
+        <div>
+          <p>Time</p>
+          <h3>${(date.getHours() > 12) ? date.getHours() - 12 : date.getHours()}:${date.getMinutes()} ${(date.getHours() >= 12) ? "PM" : "AM"}</h3>
+          <h3>${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}</h3>
+        </div>
+        <div>
+          <p>First Name</p>
+          <h3>${data.firstname}</h3>
+          <p>Last Name</p>
+          <h3>${data.lastname}</h3>
+        </div>
+        <div>
+          <p>Phone #</p>
+          <h3>${fphone}</h3>
+          <p>Email</p>
+          <h3>${data.emailaddress}</h3>
+        </div>
+        <div>
+          <p>Address Info</p>
+          <h3>${data.addressline1}</h3>
+          <h3>${data.addressline2}</h3>
+          <h3>${data.city} ${data.zipcode}</h3>
+        </div>
+        <div style="max-width: 30%">
+          <p>Additional Info</p>
+          <h3 style="font-size:15px;">${data.addinfo}</h3>
+        </div>
+        <button style="margin-left:auto;margin-right:5px;" id="del${doc.id}">Delete</button>
+      </div>
+      `)
+        $("#del" + doc.id).click(function () {
+          swal({
+            title: "Are you sure you want to permanently delete this?",
+            buttons: true,
+            dangerMode: true,
+          })
+            .then((willDelete) => {
+              if (willDelete) {
+                //TODO 
+                //Do deleting functionality here
+                swal("Quote request successfully deleted");
+                $("#qit" + doc.id).hide();
+              } else {
+                swal("Quote request not deleted");
+              }
+            });
+        })
       });
     }
 
@@ -95,40 +154,6 @@
     <p id="info">Signing in...</p>
     <hr>
     <div id="main" style="display:none">
-      <div class="quoteitem">
-        <div>
-          <p>ID</p>
-          <h3>239fh92h</h3>
-
-        </div>
-        <div>
-          <p>Time</p>
-          <h3>1:11 AM</h3>
-          <h3>5/2/2024</h3>
-        </div>
-        <div>
-          <p>First Name</p>
-          <h3>Joe</h3>
-          <p>Last Name</p>
-          <h3>Biden</h3>
-        </div>
-        <div>
-          <p>Phone #</p>
-          <h3>(111) 111 - 1111</h3>
-          <p>Email</p>
-          <h3>joebiden@whitehouse.gov</h3>
-        </div>
-        <div>
-          <p>Address Info</p>
-          <h3>Address Line 1</h3>
-          <h3>Address Line 2</h3>
-          <h3>City Zipcode</h3>
-        </div>
-        <div style="max-width: 30%">
-          <p>Additional Info</p>
-          <h3>Something here something here</h3>
-        </div>
-      </div>
     </div>
   </main>
 
