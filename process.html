@@ -23,7 +23,7 @@
   <main>
 
     <div class="backgroundImg">
-      <img src="./assets/main.jpg" style='height:400vh;width:100%;object-fit: cover;margin:0;padding:0;' alt="" />
+      <img src="./assets/main.jpg" id="bimg" style='width:100%;object-fit: cover;margin:0;padding:0;' alt="" />
     </div>
     <div id="mshadow">
 
@@ -64,8 +64,7 @@
         <p style="margin:0;font-size:30px;color:rgb(77, 77, 77);font-weight: 300;">How we do, What we do.</p>
       </div>
     </div>
-    <div id="main-content"
-      style="height:100vh;margin-top:40vh; display:flex;flex-direction: column;align-items: center;">
+    <div id="main-content" style="margin-top:40vh; display:flex;flex-direction: column;align-items: center;">
       <div class="step">
         <div style="width:50%;display:flex;flex-direction: column;align-items: center;" class="stepinner">
           <div class="stepinfo">
@@ -127,9 +126,13 @@
 
       </div>
       <div style="display:flex;flex-direction: column;align-items: center;margin-top:5vh;width:100%;">
-        <div style="display:flex;flex-direction:column;width:60%;border-radius:15px;background-color: rgba(255, 255, 255, 0.392);align-items: center;" id="pbinfo">
-          <h1 style="font-size:40px;margin-top:30px;margin-bottom:2px;text-align:center">Get your Professional Cleaning</h1>
-          <p style="font-size:25px;color:rgb(77, 77, 77);font-weight: 300;margin-top:2px;margin-bottom:15px;text-align:center">
+        <div
+          style="display:flex;padding:4px;flex-direction:column;width:60%;border-radius:15px;background-color: rgba(255, 255, 255, 0.392);align-items: center;"
+          id="pbinfo">
+          <h1 style="font-size:40px;margin-top:30px;margin-bottom:2px;text-align:center">Get your Professional Cleaning
+          </h1>
+          <p
+            style="font-size:25px;color:rgb(77, 77, 77);font-weight: 300;margin-top:2px;margin-bottom:15px;text-align:center">
             Professional window cleaning
             done right. </p>
           <div id="head-brow" style="padding-bottom:30px;">
@@ -140,9 +143,21 @@
         </div>
       </div>
     </div>
-
+    <script>
+      $(window).on('load', function () {
+        console.log($("#head-content").height())
+        const total = $("#head-content").outerHeight(true) + $("#main-content").outerHeight(true);
+        console.log("hello")
+        $("#bimg").css({ "height": total })
+      })
+      $(window).on("resize", function () {
+        console.log($("#head-content").height())
+        const total = $("#head-content").outerHeight(true) + $("#main-content").outerHeight(true);
+        console.log("hello")
+        $("#bimg").css({ "height": total })
+      })
+    </script>
     <script src="index.js"></script>
-
 
   </main>
 </body>
