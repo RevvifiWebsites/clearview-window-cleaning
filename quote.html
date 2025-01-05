@@ -128,7 +128,15 @@
       const db = getFirestore(app);
 
       $("#submitForm").click(function () {
+        //Check required fields
+        const requiredFields = ["qformfn","qformln","qformem","qformpn","qforma1","qformc","qformzc"];
+        for (var item of requiredFields) {
+          if (String($("#" + item).val()).length < 1) {
+            alert("Please fill out all required fields.");
+            return false;
 
+          }
+        }
       })
     </script>
     <script src="index.js"></script>
