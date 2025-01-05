@@ -16,6 +16,8 @@
   <script src="https://kit.fontawesome.com/3f34c302de.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 </head>
 
@@ -141,7 +143,10 @@
         const requiredFields = ["qformfn", "qformln", "qformem", "qformpn", "qforma1", "qformc", "qformzc"];
         for (var item of requiredFields) {
           if (String($("#" + item).val()).length < 1) {
-            alert("Please fill out all required fields.");
+            swal({
+              title: "Please fill out all required fields.",
+              icon: "warning",
+            })
             return false;
           }
         }
