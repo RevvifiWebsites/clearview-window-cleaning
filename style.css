@@ -324,6 +324,7 @@ body {
   border: solid 1px black;
   padding:3px;
   width:auto;
+  margin-bottom:10px;
   border-radius:5px;
 }
 .quoteitem div {
