@@ -27,7 +27,7 @@
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-    import { getFirestore, collection, doc, setDoc, getDoc, query, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+    import { getFirestore, collection, doc, setDoc, getDoc, query, getDocs, deleteDoc, orderBy } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
     import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
     const firebaseConfig = {
       apiKey: "AIzaSyBPAvqzPbdldLzK4m2OCYdFmTC9Gk13-Cg",
@@ -46,7 +46,7 @@
     const provider = new GoogleAuthProvider();
     const auth = getAuth(app);
     async function loadData() {
-      const q = query(collection(db, "quotereqs"));
+      const q = query(collection(db, "quotereqs"), orderBy("timestamp", "desc"));
 
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
