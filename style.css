@@ -373,6 +373,17 @@ body {
 #mx:hover {
   transform: rotate(90deg);
 }
+.footer {
+  height:18vh;  
+  display:flex;
+  flex-direction:row;
+  background-color: rgb(55, 55, 55);
+  justify-content: center;
+  align-items: center;
+  color:white;
+  font-size:14px;
+  
+}
 
 @media only screen and (max-width: 900px) {
   #nav-links {
