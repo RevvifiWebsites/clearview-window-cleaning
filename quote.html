@@ -67,24 +67,24 @@
       <div id="qform" style="margin-top:35px;">
         <p>Name</p>
         <div class="sect">
-          <input type="text" id="qformfn" placeholder="First Name" />
-          <input type="text" id="qformln" placeholder="Last Name" />
+          <input type="text" id="qformfn" placeholder="First Name*" />
+          <input type="text" id="qformln" placeholder="Last Name*" />
 
         </div>
         <p>Email</p>
         <div class="sect">
-          <input style="width:100%" type="text" id="qformem" placeholder="Email Address" />
+          <input style="width:100%" type="text" id="qformem" placeholder="Email Address*" />
 
         </div>
         <p>Phone</p>
 
         <div class="sect">
-          <input style="width:100%" type="text" id="qformpn" placeholder="Phone Number" />
+          <input style="width:100%" type="text" id="qformpn" placeholder="Phone Number*" />
 
         </div>
         <p>Address</p>
         <div class="sect" style="margin-bottom:5px;">
-          <input style="width:100%" type="text" id="qforma1" placeholder="Address Line 1" />
+          <input style="width:100%" type="text" id="qforma1" placeholder="Address Line 1*" />
 
         </div>
         <div class="sect" style="margin-bottom:5px;">
@@ -92,17 +92,19 @@
 
         </div>
         <div class="sect">
-          <input type="text" id="qformc" style="margin-right:5px" placeholder="City" />
-          <input type="text" id="qformzc" placeholder="Zip Code" />
+          <input type="text" id="qformc" style="margin-right:5px" placeholder="City*" />
+          <input type="text" id="qformzc" placeholder="Zip Code*" />
 
         </div>
         <p>Additional Information</p>
 
-        <div class="sect">
+        <div class="sect" style="margin-bottom:2px;">
           <textarea style="width:100%;height:10vh;" type="text" id="qformem"
             placeholder="Additional Information / Comments"></textarea>
 
         </div>
+        <p style="margin-top:2px;margin-bottom:6px;font-size:14px !important;font-weight:400">Fields with an asterisk (*) are required</p>
+
         <button class="primary" id="submitForm" style="font-size:14px; width: 100px;">Submit</button>
 
 
