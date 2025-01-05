@@ -145,7 +145,6 @@
             return false;
           }
         }
-
         await setDoc(doc(db, "quotereqs", token()), {
           firstname: $("#qformfn").val(),
           lastname: $("#qformln").val(),
@@ -158,6 +157,13 @@
           addinfo: $("#qformai").val(),
           timestamp: String(Date.now())
         });
+
+        alert("Your quote request has been submitted successfully.");
+        for (var item of requiredFields) {
+          $("#" + item).val(" ");
+        }
+        $("#qforma2").val("");
+        $("#qformai").val("");
 
       })
     </script>
