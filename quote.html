@@ -99,11 +99,12 @@
         <p>Additional Information</p>
 
         <div class="sect" style="margin-bottom:2px;">
-          <textarea style="width:100%;height:10vh;" type="text" id="qformem"
+          <textarea style="width:100%;height:10vh;" type="text" id="qformai"
             placeholder="Additional Information / Comments"></textarea>
 
         </div>
-        <p style="margin-top:2px;margin-bottom:6px;font-size:14px !important;font-weight:400">Fields with an asterisk (*) are required</p>
+        <p style="margin-top:2px;margin-bottom:6px;font-size:14px !important;font-weight:400">Fields with an asterisk
+          (*) are required</p>
 
         <button class="primary" id="submitForm" style="font-size:14px; width: 100px;">Submit</button>
 
@@ -116,27 +117,48 @@
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
       import { getFirestore, collection, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
-        const firebaseConfig = {
-          apiKey: "AIzaSyBPAvqzPbdldLzK4m2OCYdFmTC9Gk13-Cg",
-          authDomain: "clearviewwindow-882f0.firebaseapp.com",
-          projectId: "clearviewwindow-882f0",
-          storageBucket: "clearviewwindow-882f0.firebasestorage.app",
-          messagingSenderId: "1040592919482",
-          appId: "1:1040592919482:web:ddbdf5bacd0494de71db83"
-        };
+      const firebaseConfig = {
+        apiKey: "AIzaSyBPAvqzPbdldLzK4m2OCYdFmTC9Gk13-Cg",
+        authDomain: "clearviewwindow-882f0.firebaseapp.com",
+        projectId: "clearviewwindow-882f0",
+        storageBucket: "clearviewwindow-882f0.firebasestorage.app",
+        messagingSenderId: "1040592919482",
+        appId: "1:1040592919482:web:ddbdf5bacd0494de71db83"
+      };
       const app = initializeApp(firebaseConfig);
       const db = getFirestore(app);
+      var rand = function () {
+        return Math.random().toString(36).substr(2); 
+      };
 
-      $("#submitForm").click(function () {
+      var token = function () {
+        return rand() + rand(); 
+      };
+      //Thanks to https://stackoverflow.com/a/8532436/15317733, i totally didn't get lazy again
+
+      $("#submitForm").click(async function () {
         //Check required fields
-        const requiredFields = ["qformfn","qformln","qformem","qformpn","qforma1","qformc","qformzc"];
+        const requiredFields = ["qformfn", "qformln", "qformem", "qformpn", "qforma1", "qformc", "qformzc"];
         for (var item of requiredFields) {
           if (String($("#" + item).val()).length < 1) {
             alert("Please fill out all required fields.");
             return false;
-
           }
         }
+
+        await setDoc(doc(db, "quotereqs", token()), {
+          firstname: $("#qformfn").val(),
+          lastname: $("#qformln").val(),
+          emailaddress: $("#qformem").val(),
+          phonenumber: $("#qformpn").val(),
+          addressline1: $("#qforma1").val(),
+          addressline2: $("#qforma2").val(),
+          city: $("#qformc").val(),
+          zipcode: $("#qformzc").val(),
+          addinfo: $("#qformai").val(),
+          timestamp: String(Date.now())
+        });
+
       })
     </script>
     <script src="index.js"></script>
