@@ -318,6 +318,26 @@ body {
   margin-left: 30px;
   margin-bottom: 30px;
 }
+.quoteitem {
+  display:flex;
+  flex-direction:row;
+  border: solid 1px black;
+  padding:3px;
+  width:auto;
+  border-radius:5px;
+}
+.quoteitem div {
+  margin-right:9px;
+}
+.quoteitem div p {
+  font-size:15px;
+  margin-top:5px;
+  margin-bottom:3px;
+}
+.quoteitem div h3 {
+  margin-top:0;
+  margin-bottom:0;
+}
 
 #nav-links p {
   font-size: 18px;

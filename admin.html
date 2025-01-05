@@ -47,6 +47,7 @@
 
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
+        console.log(doc.data())
 
       });
     }
@@ -84,6 +85,7 @@
             // const email = error.customData.email;
             // const credential = GoogleAuthProvider.credentialFromError(error);
             // Probably not needed for now
+            alert("An error occured, please try again later.")
           });
       }
     });
@@ -92,6 +94,42 @@
     <h1>Clearview Window Cleaning Admin</h1>
     <p id="info">Signing in...</p>
     <hr>
+    <div id="main" style="display:none">
+      <div class="quoteitem">
+        <div>
+          <p>ID</p>
+          <h3>239fh92h</h3>
+
+        </div>
+        <div>
+          <p>Time</p>
+          <h3>1:11 AM</h3>
+          <h3>5/2/2024</h3>
+        </div>
+        <div>
+          <p>First Name</p>
+          <h3>Joe</h3>
+          <p>Last Name</p>
+          <h3>Biden</h3>
+        </div>
+        <div>
+          <p>Phone #</p>
+          <h3>(111) 111 - 1111</h3>
+          <p>Email</p>
+          <h3>joebiden@whitehouse.gov</h3>
+        </div>
+        <div>
+          <p>Address Info</p>
+          <h3>Address Line 1</h3>
+          <h3>Address Line 2</h3>
+          <h3>City Zipcode</h3>
+        </div>
+        <div style="max-width: 30%">
+          <p>Additional Info</p>
+          <h3>Something here something here</h3>
+        </div>
+      </div>
+    </div>
   </main>
 
 </body>
