@@ -111,19 +111,20 @@
     <div id="main-content">
 
     </div>
-    <script>
+    <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
       import { getFirestore, collection, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyBPAvqzPbdldLzK4m2OCYdFmTC9Gk13-Cg",
+          authDomain: "clearviewwindow-882f0.firebaseapp.com",
+          projectId: "clearviewwindow-882f0",
+          storageBucket: "clearviewwindow-882f0.firebasestorage.app",
+          messagingSenderId: "1040592919482",
+          appId: "1:1040592919482:web:ddbdf5bacd0494de71db83"
+        };
       const app = initializeApp(firebaseConfig);
       const db = getFirestore(app);
-      const firebaseConfig = {
-        apiKey: "AIzaSyBPAvqzPbdldLzK4m2OCYdFmTC9Gk13-Cg",
-        authDomain: "clearviewwindow-882f0.firebaseapp.com",
-        projectId: "clearviewwindow-882f0",
-        storageBucket: "clearviewwindow-882f0.firebasestorage.app",
-        messagingSenderId: "1040592919482",
-        appId: "1:1040592919482:web:ddbdf5bacd0494de71db83"
-      };
+
       $("#submitForm").click(function () {
 
       })
