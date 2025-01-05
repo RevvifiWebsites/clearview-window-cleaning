@@ -27,7 +27,7 @@
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-    import { getFirestore, collection, doc, setDoc, getDoc, query, getDocs } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+    import { getFirestore, collection, doc, setDoc, getDoc, query, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
     import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
     const firebaseConfig = {
       apiKey: "AIzaSyBPAvqzPbdldLzK4m2OCYdFmTC9Gk13-Cg",
@@ -95,8 +95,7 @@
           })
             .then((willDelete) => {
               if (willDelete) {
-                //TODO 
-                //Do deleting functionality here
+                deleteQuote(doc.id);
                 swal("Quote request successfully deleted");
                 $("#qit" + doc.id).hide();
               } else {
@@ -106,7 +105,9 @@
         })
       });
     }
-
+    async function deleteQuote(id) {
+      await deleteDoc(doc(db, "quotereqs", id));
+    } 
     auth.onAuthStateChanged(function (user) {
       const ALLOWLIST = ["wilburw2026@gmail.com", "wilburwei.2008@gmail.com"]
 
