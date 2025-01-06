@@ -394,6 +394,10 @@ body {
     flex-direction: column;
     align-items: center !important;
     margin-bottom: 0vh;
+    width:90%;
+  }
+  .step img {
+    margin-bottom:3px;
   }
 
   .stepinfo {
@@ -433,6 +437,9 @@ body {
 
   .missionmain h1 {
     font-size: 40px !important;
+  }
+  .missionmain p {
+    font-size:20px !important;
   }
 
   #mbar {
