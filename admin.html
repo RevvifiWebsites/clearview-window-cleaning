@@ -49,6 +49,9 @@
       const q = query(collection(db, "quotereqs"), orderBy("timestamp", "desc"));
 
       const querySnapshot = await getDocs(q);
+      if (querySnapshot.docs.length ==0) {
+        $("#main").append(`<p>Quote requests loaded successfully, none found.</p>`)
+      }
       querySnapshot.forEach((doc) => {
         const data = (doc.data())
         const date = new Date(Number(data.timestamp));
