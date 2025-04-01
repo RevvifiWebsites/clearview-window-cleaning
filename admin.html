@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Clearview Window Cleaning - Admin</title>
+  <title>Clearview Property Cleaning Services - Admin</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,7 +112,7 @@
       await deleteDoc(doc(db, "quotereqs", id));
     } 
     auth.onAuthStateChanged(function (user) {
-      const ALLOWLIST = ["wilburw2026@gmail.com", "wilburwei.2008@gmail.com"]
+      const ALLOWLIST = ["wilburw2026@gmail.com", "wilburwei.2008@gmail.com", "rayzhang2021@gmail.com"]
 
       if (user) {
         if (ALLOWLIST.includes(user.email)) {
@@ -150,7 +150,7 @@
     });
   </script>
   <main style="padding:20px;">
-    <h1>Clearview Window Cleaning Admin</h1>
+    <h1>Clearview Property Cleaning Services Admin</h1>
     <p id="info">Signing in...</p>
     <hr>
     <div id="main" style="display:none">
