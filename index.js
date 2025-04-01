@@ -48,8 +48,7 @@ window.onload = function () {
   })
   console.log('ea')
   $(".linkau").click(function() {
-    console.log("ea")
-    window.location.href="/mission.html"
+    window.location.href="/services.html"
   })
   $(".linkgq").click(function () {
     window.location.href = "/quote.html"
