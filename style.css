@@ -391,6 +391,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+#mission {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 #democonin {
   height: 95vh;
   width:98%;
