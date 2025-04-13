@@ -317,26 +317,30 @@ body {
   margin-left: 30px;
   margin-bottom: 30px;
 }
+
 .quoteitem {
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   border: solid 1px black;
-  padding:3px;
-  width:auto;
-  margin-bottom:10px;
-  border-radius:5px;
+  padding: 3px;
+  width: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
+
 .quoteitem div {
-  margin-right:9px;
+  margin-right: 9px;
 }
+
 .quoteitem div p {
-  font-size:15px;
-  margin-top:5px;
-  margin-bottom:3px;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 3px;
 }
+
 .quoteitem div h3 {
-  margin-top:0;
-  margin-bottom:0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #nav-links p {
@@ -373,24 +377,27 @@ body {
 #mx:hover {
   transform: rotate(90deg);
 }
+
 .footer {
-  height:18vh;  
-  display:flex;
-  flex-direction:row;
+  height: 18vh;
+  display: flex;
+  flex-direction: row;
   background-color: rgb(55, 55, 55);
   justify-content: center;
   align-items: center;
-  color:white;
-  font-size:14px;
-  
+  color: white;
+  font-size: 14px;
+
 }
+
 #democon {
-  height:100vh;
-  display:flex;
-  flex-direction:row;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+
 #mission {
   height: 100vh;
   display: flex;
@@ -398,67 +405,154 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.service {
+  width: auto;
+  height: 500px;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 5px;
+  background-color: #fafafaa3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.service .icontain {
+  display: fiex;
+  padding: 0;
+  width: 600px;
+  height: 450px;
+}
+
+.icontain {
+  flex-direction: column;
+}
+
+.icontain img {
+  width: 49%;
+  height: 450px;
+}
+
+
+.sinfo {
+  margin-top: 10px;
+  padding: 0;
+  width: 400px;
+  max-width: 80vw;
+  height: 450px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sinfo h1,
+.sinfo p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.sinfo h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.sinfo p {
+  font-size: 25px;
+}
+
+.icontain img {
+  object-fit: cover;
+}
+
 #democonin {
   height: 95vh;
-  width:98%;
+  width: 98%;
   background-color: #ebebeb;
-    display: flex;
-    border-radius:5px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  border-radius: 5px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+
 .demoh {
   width: 40%;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
 
 }
+
+.missionmain {
+  padding: 120px 50px;
+  background-image: url('/assets/main.jpg');
+  background-color: rgba(244, 244, 244, 0.4);
+  background-blend-mode: lighten;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  border-radius:10px;
+}
+
 .demoh img {
-  width:50%;
-  margin:0;
+  width: 50%;
+  margin: 0;
   object-fit: cover;
-  height:70vh;
+  height: 70vh;
   transition-duration: 0.3s;
 }
+
 .demoh img:hover {
-  scale:1.05;
+  scale: 1.05;
   border-radius: 15px 15px 15px 15px !important;
 }
+
 @media only screen and (max-width: 900px) {
   #nav-links {
     display: none;
   }
+
   #democonin {
     flex-direction: column;
   }
+
   .demoh {
-    width:90% !important;
+    width: 90% !important;
   }
+
   .demoh img {
-    height:50vh;
+    height: 50vh;
   }
+
   .demoh h1 {
-    font-size:35px !important;
+    font-size: 35px !important;
   }
+
   .demoh h3 {
-    font-size:15px !important;
+    font-size: 15px !important;
   }
+
   .demoh button {
-    font-size:13px !important
+    font-size: 13px !important
   }
 
   .step {
     flex-direction: column;
     align-items: center !important;
     margin-bottom: 0vh;
-    width:90%;
+    width: 90%;
   }
+
   .step img {
-    margin-bottom:3px;
+    margin-bottom: 3px;
   }
 
   .stepinfo {
@@ -473,14 +567,56 @@ body {
   #pbinfo {
     width: 80% !important;
   }
+
+  .service {
+    flex-direction: column;
+    height: auto;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px;
+    max-width: 95%;
+  }
+
+  .sinfo {
+    height: 250px;
+  }
+
+  .icontain {
+    flex-direction: column !important;
+    max-width: 90vw;
+    height: 300px !important;
+
+  }
+
+  .service h1 {
+    font-size: 33px;
+  }
+
+  .service p {
+    font-size: 19px;
+  }
+
+  .service h1,
+  .service p {
+    max-width: 80vw;
+  }
+
+  .icontain img {
+    width: 100% !important;
+    height: 130px !important;
+  }
+
+
   #pbinfo h1 {
     font-size: 30px !important;
   }
+
   #pbinfo p {
-    font-size:20px !important;
+    font-size: 20px !important;
   }
+
   #pbinfo button {
-    font-size:15px !important;
+    font-size: 15px !important;
   }
 
   .stepinner,
@@ -495,12 +631,16 @@ body {
   .stepinner {
     justify-content: center !important;
   }
+  .missionmain {
+    padding: 100px 5px;
+  }
 
   .missionmain h1 {
     font-size: 40px !important;
   }
+
   .missionmain p {
-    font-size:20px !important;
+    font-size: 20px !important;
   }
 
   #mbar {

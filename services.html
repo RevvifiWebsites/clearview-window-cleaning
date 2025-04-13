@@ -23,7 +23,7 @@
   <main>
 
     <div class="backgroundImg">
-      <img src="./assets/main.jpg" style='height: 130vh;width:100%;object-fit: cover;margin:0;padding:0;' alt="" />
+      <img src="./assets/main.jpg" id="bimg" style='width:100%;object-fit: cover;margin:0;padding:0;' alt="" />
     </div>
     <div id="mshadow">
 
@@ -58,25 +58,110 @@
 
 
     </div>
-    <div id="head-content" style="height:120vh;">
-      <div id="head-div" class="missionmain">
+    <div id="head-content" style="height:45vh;justify-content: end;">
+      <div id="head-div" class="processhead">
         <h1 style="margin:0;font-size:65px">Our Services</h1>
+        <p style="margin:0;font-size:30px;color:rgb(77, 77, 77);font-weight: 300;">We provide a unique range of
+          professional services</p>
       </div>
     </div>
-    <div id="main-content">
+    <div id="main-content" style="margin-top:40vh; display:flex;flex-direction: column;align-items: center;">
+      <div class="service">
+        <div class="icontain" >
+          <img src="/assets/windows1.jpeg"/>
+          <img src="/assets/windows2.jpeg"/>
 
+        </div>
+        <div class="sinfo">
+          <h1>Window Cleaning</h1>
+          <p>Our expert team provides streak-free, spotless window cleaning for residential and commercial properties,
+            using
+            industry-grade tools to ensure a pristine finish every time.</p>
+        </div>
+      </div>
+      <div class="service">
+        <div class="sinfo">
+          <h1>House & Roof Cleaning</h1>
+          <p>Our experienced team safely removes dirt, grime, mold, and algae from siding, brick, shingles, and more,
+            leaving your
+            home looking fresh and well-maintained.</p>
+        </div>
+        <div class="icontain" >
+          <img src="/assets/houses1.jpeg"/>
+          <img src="/assets/houses2.jpeg"/>
+
+        </div>
+      </div>
+      <div class="service">
+        <div class="icontain" >
+          <img src="/assets/pressures1.jpeg" />
+          <img src="/assets/pressures2.jpeg" />
+
+        </div>
+        <div class="sinfo">
+          <h1>Pressure Washing</h1>
+          <p>Restore the beauty of your exterior surfaces with professional pressure washing that removes years
+            of built-up dirt, grime, mold, and stains—using high-powered equipment designed to deliver long-lasting
+            results that truly stand out.
+          </p>
+        </div>
+      </div>
+      <div class="service">
+        <div class="sinfo">
+          <h1>Miscellaneous Cleaning</h1>
+          <p>Using professional equipment, we are experts in a large range of house and property cleaning services.
+          </p>
+        </div>
+        <div class="icontain" >
+          <img src="/assets/miscs1.jpeg"/>
+          <img src="/assets/miscs2.jpeg"/>
+
+        </div>
+      </div>
+      <div
+        style="display:flex;flex-direction: column;align-items: center;margin-top:15vh;margin-bottom:10vh;width:100%;">
+        <div
+          style="display:flex;padding:4px;flex-direction:column;width:60%;border-radius:15px;background-color: rgba(255, 255, 255, 0.392);align-items: center;"
+          id="pbinfo">
+          <h1 style="font-size:40px;margin-top:30px;margin-bottom:2px;text-align:center">Get your Professional Cleaning
+          </h1>
+          <p
+            style="font-size:25px;color:rgb(77, 77, 77);font-weight: 300;margin-top:2px;margin-bottom:15px;text-align:center">
+            Professional cleaning
+            done right. </p>
+          <div id="head-brow" style="padding-bottom:30px;">
+            <button class="primary linkcu" style="font-size:17px; margin-right:20px;">Contact Us</button>
+            <button class="secondary linkgq" style="font-size:17px">Get a Quote</button>
+
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="footer" style="margin-top:120vh;">
+    <div class="footer" style="margin-top:20vh;">
       <div style="text-align:center">
-        <p style="margin-bottom:0;font-weight:700;margin-top:0;font-size:17px;color:rgb(237, 237, 237)">Clearview Property Cleaning Services</p>
+        <p style="margin-bottom:0;font-weight:700;margin-top:0;font-size:17px;color:rgb(237, 237, 237)">Clearview
+          Property Cleaning Services</p>
         <p style="margin-top:5px;font-size:12px;margin-bottom:0;color:rgb(180, 180, 180);font-weight:300">Copyright ©
           2025 |
           Designed by <span style="font-weight: 600;">Revvifi NY</span></p>
       </div>
 
     </div>
+    <script>
+      $(window).on('load', function () {
+        console.log($("#head-content").height())
+        const total = $("#head-content").outerHeight(true) + $("#main-content").outerHeight(true);
+        console.log("hello")
+        $("#bimg").css({ "height": total })
+      })
+      $(window).on("resize", function () {
+        console.log($("#head-content").height())
+        const total = $("#head-content").outerHeight(true) + $("#main-content").outerHeight(true);
+        console.log("hello")
+        $("#bimg").css({ "height": total })
+      })
+    </script>
     <script src="index.js"></script>
-
 
   </main>
 </body>

@@ -28,7 +28,7 @@ window.onload = function () {
         width: 0,
         opacity: 0,
       }, 400)
-      $("#mx").animate({
+       $("#mx").animate({
         opacity: 0,
       }, 400, function() {
         $("#mshadow").css("display", "none")
